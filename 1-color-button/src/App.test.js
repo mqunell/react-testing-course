@@ -29,12 +29,12 @@ test('button changes text and color when clicked', () => {
 
 	// Click the button and check the new text and backgroundColor
 	fireEvent.click(colorButton);
-	expect(colorButton.textContent).toBe('Change to Medium Violet Red');
+	expect(colorButton).toHaveTextContent('Change to Medium Violet Red');
 	expect(colorButton).toHaveStyle({ backgroundColor: 'MidnightBlue' });
 
 	// Click the button again and check the new (original) text and backgroundColor
 	fireEvent.click(colorButton);
-	expect(colorButton.textContent).toBe('Change to Midnight Blue');
+	expect(colorButton).toHaveTextContent('Change to Midnight Blue');
 	expect(colorButton).toHaveStyle({ backgroundColor: 'Medium Violet Red' });
 });
 
